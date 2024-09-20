@@ -916,6 +916,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 9000800309136742602, guid: 8f95c6a02ffb0459a98456090bb90b15, type: 3}
+      propertyPath: Wide_Laser
+      value: 
+      objectReference: {fileID: 4633279137628612238, guid: 7606344b8f15a40ab8d11ba3fe212439, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

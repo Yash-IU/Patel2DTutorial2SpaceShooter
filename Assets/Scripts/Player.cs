@@ -6,6 +6,9 @@ public class NewBehaviourScript : MonoBehaviour
 {
     float yPosition;
     [SerializeField] GameObject laser;
+    [SerializeField] GameObject Wide_Laser;
+    public float fireRate = 8f;
+    private float nextFire = 0f;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,6 +24,12 @@ public class NewBehaviourScript : MonoBehaviour
         if (Input.GetButtonDown("FireLaser"))
         {
             Instantiate(laser, transform.position, Quaternion.identity);
+        }
+
+        if (Input.GetButtonDown("FireWideLaser") && Time.time > nextFire)
+        {
+            nextFire = Time.time + fireRate;
+            Instantiate(Wide_Laser, transform.position, Quaternion.identity);
         }
     }
 }
